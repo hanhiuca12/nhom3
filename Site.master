@@ -1,0 +1,129 @@
+﻿<%@ Master Language="VB" AutoEventWireup="true" CodeFile="Site.master.vb" Inherits="SiteMaster" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <title><%: Page.Title %> - My ASP.NET Application</title>
+    <asp:PlaceHolder runat="server">    
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+    <webopt:BundleReference runat="server" Path="~/Content/css" /> 
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width" />
+    <asp:ContentPlaceHolder runat="server" ID="HeadContent" />
+    <link href="Content/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <script src="Scripts/jquery.min.js"></script>
+    <link href="Content/style.css" rel="stylesheet" type="text/css" media="all" />	
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Wedding Store Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+    Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <script src="Scripts/simpleCart.min.js"> </script>
+    <link href="Content/memenu.css" rel="stylesheet" type="text/css" media="all" />
+    <script type="text/javascript" src="Scripts/memenu.js"></script>
+    <script>$(document).ready(function () { $(".memenu").memenu(); });</script>	
+</head>
+<body>
+    <form runat="server">
+    <asp:ScriptManager runat="server">
+        <Scripts>
+            <%--Framework scripts--%>
+            <asp:ScriptReference Name="MsAjaxBundle" />
+            <asp:ScriptReference Name="jquery" />
+            <asp:ScriptReference Name="jquery.ui.combined" />
+            <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+            <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+            <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+            <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+            <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+            <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+            <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+            <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+            <asp:ScriptReference Name="WebFormsBundle" />
+            <%--Site scripts--%>
+
+        </Scripts>
+    </asp:ScriptManager>
+<div class="top_bg">
+	<div class="container">
+		<div class="header_top-sec">
+			<div class="top_left">
+				<ul>
+					<li class="top_link"><a href="login.html">My Account</a></li>					
+				</ul>
+			</div>
+				<div class="clearfix"> </div>
+		</div>
+	</div>
+</div>
+<div class="header-top">
+	 <div class="header-bottom">
+		 <div class="container">			
+				<div class="logo">
+					<a href="Default.aspx"><h1>Fresh Cart</h1></a>
+				</div>
+			 <!---->
+		 
+			 <div class="top-nav">
+				<ul class="memenu skyblue">
+                    <li class="active"><asp:HyperLink id="hyperlink1" NavigateUrl="Default.aspx" Text="Trang chủ" runat="server"/></li>
+					<li class="grid"><asp:HyperLink id="hyperlink2" NavigateUrl="khachhang.aspx" Text="Khách hàng" runat="server"/></li>
+					<li class="grid"><asp:HyperLink id="hyperlink3" NavigateUrl="sanpham.aspx" Text="Sản phẩm" runat="server"/></li>
+					<li class="grid"><asp:HyperLink id="hyperlink4" NavigateUrl="loaisanpham.aspx" Text="Loại sản phẩm" runat="server"/></li>
+                    <li class="grid"><asp:HyperLink id="hyperlink5" NavigateUrl="hoadon.aspx" Text="Hóa đơn" runat="server"/></li>
+                    <li class="grid"><asp:HyperLink id="hyperlink6" NavigateUrl="chitiethoadon.aspx" Text="Chi tiết hóa đơn" runat="server"/></li>
+				</ul>
+				<div class="clearfix"> </div>
+			 </div>
+			 <!---->
+			 <div class="clearfix"> </div>
+			 <!---->			 
+			 </div>
+			<div class="clearfix"> </div>
+	  </div>
+</div>
+    <div id="body">
+        <asp:ContentPlaceHolder runat="server" ID="FeaturedContent" />
+        <section class="content-wrapper main-content clear-fix">
+            <asp:ContentPlaceHolder runat="server" ID="MainContent" />
+        </section>
+    </div>
+    <div class="footer">
+	 <div class="container">
+		 <div class="ftr-grids">
+			 <div class="col-md-3 ftr-grid">
+				 <h4><asp:HyperLink id="hyperlink7" NavigateUrl="Default.aspx" Text="Trang chủ" runat="server"/></h4> 
+			 </div>
+             <div class="col-md-3 ftr-grid">
+				 <h4><asp:HyperLink id="hyperlink14" NavigateUrl="gioithieu.aspx" Text="Giới thiệu" runat="server"/></h4>
+			 </div>
+			 <div class="col-md-3 ftr-grid">
+				 <h4>Quản lý</h4>
+				 <ul>
+					 <li><asp:HyperLink id="hyperlink9" NavigateUrl="khachhang.aspx" Text="Khách hàng" runat="server"/></li>
+					 <li><asp:HyperLink id="hyperlink10" NavigateUrl="sanpham.aspx" Text="Sản phẩm" runat="server"/></li>
+					 <li><asp:HyperLink id="hyperlink11" NavigateUrl="loaisanpham.aspx" Text="Loại sản phẩm" runat="server"/></li>
+					 <li><asp:HyperLink id="hyperlink12" NavigateUrl="hoadon.aspx" Text="Hóa đơn" runat="server"/></li>
+					 <li><asp:HyperLink id="hyperlink13" NavigateUrl="chitiethoadon.aspx" Text="Chi tiết hóa đơn" runat="server"/></li>			 
+				 </ul>
+			 </div>
+			 <div class="col-md-3 ftr-grid">
+				 <h4><asp:HyperLink id="hyperlink8" NavigateUrl="lienhe.aspx" Text="Liên hệ" runat="server"/></h4>
+			 </div>
+             
+			 <div class="clearfix"></div>
+		 </div>		
+	 </div>
+</div>
+
+<!---->
+ <div class="copywrite">
+	 <div class="container">
+			 <p>Copyright © 2016 . Designer by nhom3</p>
+		 </div>
+</div>	
+    </form>
+</body>
+</html>
